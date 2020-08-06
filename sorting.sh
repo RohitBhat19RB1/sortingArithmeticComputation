@@ -45,3 +45,18 @@ do
 done
 echo "descending order" ${Array[@]}
 
+
+for (( i=1; i<=4; i++ ))
+do
+        for (( j = $(( $i + 1 )); j <= 4; j++ ))
+        do
+                if [[ ${Array[$i]} -gt ${Array[$j]} ]]
+                then
+                        temp=${Array[$i]}
+                        Array[$i]=${Array[$j]}
+                        Array[$j]=$temp
+                fi
+        done
+done
+echo "ascending order" ${Array[@]}
+
