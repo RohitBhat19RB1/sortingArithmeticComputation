@@ -15,3 +15,16 @@ echo "Third operation results " $val3
 
 val4=$(( $a % $b + $c ))
 echo "Fourth operation results " $val4
+
+declare -A results
+
+results[one]=$val1
+results[two]=$val2
+results[three]=$val3
+results[four]=$val4
+
+echo ${results[one]}
+echo ${results[two]}
+echo ${results[three]}
+echo ${results[four]}
+
