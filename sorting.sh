@@ -23,8 +23,20 @@ results[two]=$val2
 results[three]=$val3
 results[four]=$val4
 
-echo ${results[one]}
-echo ${results[two]}
-echo ${results[three]}
-echo ${results[four]}
+for values in ${results[@]}
+do
+echo $values
+done
 
+counter=1;
+
+for i in ${results[@]}
+do
+Array[((counter))]=$i
+((counter++))
+done
+
+for j in ${Array[@]}
+do
+echo $j
+done
