@@ -12,3 +12,6 @@ echo "Second operation results " $val2
 
 val3=$(( $c + $a / $b ))
 echo "Third operation results " $val3
+
+val4=$(( $a % $b + $c ))
+echo "Fourth operation results " $val4
